@@ -18,11 +18,7 @@ def run_game():
         #监听鼠标键盘事件
         gf.check_events(my_settings, screen, my_ship, bullets)
         my_ship.update()
-        bullets.update()
-        for bullet in bullets.copy():
-            if bullet.rect.bottom <= 0:
-                bullets.remove(bullet)
-
+        gf.update_bullets(bullets)
         #填充背景色
         gf.update_screen(my_settings, screen, my_ship, bullets)
 
