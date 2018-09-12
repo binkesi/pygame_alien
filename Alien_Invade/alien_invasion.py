@@ -13,6 +13,8 @@ def run_game():
     pygame.display.set_caption("Alien Invasion")
     my_ship = Ship(my_settings, screen)
     bullets = Group()
+    aliens = Group()
+    gf.create_fleet(my_settings, screen, my_ship, aliens)
 
     while True:
         #监听鼠标键盘事件
@@ -20,7 +22,7 @@ def run_game():
         my_ship.update()
         gf.update_bullets(bullets)
         #填充背景色
-        gf.update_screen(my_settings, screen, my_ship, bullets)
+        gf.update_screen(my_settings, screen, my_ship, aliens, bullets)
 
 
 def main():
