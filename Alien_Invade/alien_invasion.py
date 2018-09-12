@@ -21,6 +21,7 @@ def run_game():
         gf.check_events(my_settings, screen, my_ship, bullets)
         my_ship.update()
         gf.update_bullets(bullets)
+        gf.update_aliens(my_settings, aliens)
         #填充背景色
         gf.update_screen(my_settings, screen, my_ship, aliens, bullets)
 
