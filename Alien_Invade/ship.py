@@ -2,9 +2,11 @@
 # -*- coding:utf-8 -*-
 
 import pygame
+from pygame.sprite import Sprite
 
-class Ship():
+class Ship(Sprite):
     def __init__(self, my_settings, screen):
+        super().__init__()
         self.screen = screen
         self.my_settings = my_settings
 
