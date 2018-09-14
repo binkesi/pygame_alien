@@ -33,11 +33,15 @@ class Ship():
         if self.moving_left and self.rect.left > 0:
             self.center -= self.my_settings.ship_speed_factor
         if self.moving_up and self.rect.top > 0:
-            self.rect.centery -= 1
+            self.rect.centery -= 2
         if self.moving_down and self.rect.bottom < self.screen_rect.bottom:
-            self.rect.centery += 1
+            self.rect.centery += 2
 
         self.rect.centerx = self.center
+
+    def center_ship(self):
+        self.center = self.screen_rect.centerx
+        self.rect.bottom = self.screen_rect.bottom
 
     def blitme(self):
         self.screen.blit(self.image, self.rect)

@@ -31,6 +31,6 @@ class Alien(Sprite):
 
     def update(self):
         self.x += (self.my_settings.alien_speed * self.my_settings.fleet_direction)
-        self.rect.y += self.my_settings.fleet_drop_speed
+        self.y += self.my_settings.fleet_drop_speed
         self.rect.x = self.x
         self.rect.y = self.y
